@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-fraunces: "Fraunces", Georgia, serif;
+  --font-inter: "Inter", system-ui, sans-serif;
+
+  /* Dark theme (default) */
+  --color-ink: 20 19 15; /* page background */
+  --color-panel: 27 25 20;
+  --color-panelmuted: 33 31 25;
+  --color-paper: 242 236 225; /* primary text */
+  --color-muted: 156 147 132;
+  --color-hairline: 51 47 39;
+  --color-signal: 255 106 53; /* vivid accent, solid fills only */
+  --color-signaldim: 122 58 32;
+  --color-signal-ink: 255 106 53; /* accent for text/borders */
+}
+
+:root.light {
+  --color-ink: 246 242 234;
+  --color-panel: 255 255 255;
+  --color-panelmuted: 237 231 219;
+  --color-paper: 28 26 21; /* primary text */
+  --color-muted: 106 98 85;
+  --color-hairline: 214 206 190;
+  --color-signal: 255 106 53;
+  --color-signaldim: 214 174 150;
+  --color-signal-ink: 168 58 20; /* darkened for AA contrast on light bg */
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+::selection {
+  background-color: rgb(var(--color-signal));
+  color: #14130f;
+}
+
+/* Visible keyboard focus, always */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid rgb(var(--color-signal-ink));
+  outline-offset: 3px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
