@@ -12,6 +12,7 @@ const links = [
   { href: "/experience", label: "Experience" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/skills", label: "Skills" },
+  { href: "/education", label: "Education" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -29,23 +30,24 @@ export default function Nav() {
           className="group relative flex h-10 w-[190px] items-center overflow-hidden"
         >
           {/* SP Logo */}
-<span className="absolute left-0 z-10 flex h-10 w-10 items-center justify-center">
-  <Image
-    src="/SP.png"
-    alt="SP logo"
-    width={40}
-    height={40}
-    priority
-    className="h-10 w-10 object-contain"
-  />
-</span>
+          <span className="absolute left-0 z-10 flex h-10 w-10 items-center justify-center">
+            <Image
+              src="/SP.png"
+              alt="SP logo"
+              width={40}
+              height={40}
+              priority
+              className="h-10 w-10 object-contain"
+            />
+          </span>
 
-{/* Full name revealed on hover */}
-<span className="absolute left-12 translate-x-4 whitespace-nowrap font-display text-lg tracking-tight text-paper opacity-0 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:opacity-100">
-  | Sabyasachi Patro
-</span>
+          {/* Full name revealed on hover */}
+          <span className="absolute left-12 translate-x-4 whitespace-nowrap font-display text-lg tracking-tight text-paper opacity-0 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:opacity-100">
+            | Sabyasachi Patro
+          </span>
         </Link>
 
+        {/* Desktop navigation */}
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((link) => {
             const isActive = pathname === link.href;
@@ -72,6 +74,7 @@ export default function Nav() {
           <ThemeToggle />
         </nav>
 
+        {/* Mobile navigation controls */}
         <div className="flex items-center gap-3 md:hidden">
           <ThemeToggle />
 
@@ -86,6 +89,7 @@ export default function Nav() {
         </div>
       </div>
 
+      {/* Mobile navigation menu */}
       {open && (
         <nav className="border-t border-hairline px-6 pb-6 md:hidden">
           <div className="flex flex-col gap-4 pt-4">
