@@ -5,7 +5,12 @@ import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import { caseStudies } from "@/lib/case-studies";
-import { education, experience, siteConfig, skillGroups } from "@/lib/site-config";
+import {
+  education,
+  experience,
+  siteConfig,
+  skillGroups,
+} from "@/lib/site-config";
 
 export default function Home() {
   const featured = caseStudies.filter((cs) => cs.featured);
@@ -24,15 +29,22 @@ export default function Home() {
           <div className="md:col-span-2">
             <SectionHeading title="About" />
 
-            <p className="max-w-prose text-lg leading-relaxed text-paper">
-              I spent five-plus years as a Texture & Look Development artist
-              in film and animation — work that lives or dies on
-              problem-solving inside real constraints. Product management is
-              a deliberate evolution of that same instinct, applied to a
-              different kind of problem: understanding what a user actually
-              needs, and building the smallest useful thing that gets them
-              there.
-            </p>
+            <div className="max-w-prose space-y-6 text-lg leading-relaxed">
+              <p className="text-paper">
+                I’m an aspiring Associate Product Manager focused on building
+                useful products that solve real user problems. I enjoy
+                understanding user needs, breaking down complex challenges, and
+                turning ideas into practical product experiences.
+              </p>
+
+              <p className="text-muted">
+                Through product case studies and AI-powered prototypes, I’m
+                developing my skills in product discovery, prioritization, MVP
+                definition, and product metrics. I’m looking forward to
+                contributing to meaningful products while learning from
+                experienced product teams.
+              </p>
+            </div>
 
             <Link
               href="/about"
@@ -44,14 +56,14 @@ export default function Home() {
           </div>
 
           <div className="border-l border-hairline pl-8">
-            <p className="mb-4 text-sm text-muted">What carries over</p>
+            <p className="mb-4 text-sm text-muted">What I’m focused on</p>
 
             <ul className="space-y-3 text-paper">
               {[
-                "Problem-solving under real constraints",
-                "Cross-functional collaboration",
-                "Creative and analytical thinking",
-                "Attention to detail, under deadline",
+                "Product discovery and problem definition",
+                "User journeys and pain-point analysis",
+                "Feature prioritization and MVP thinking",
+                "AI-powered product prototypes",
               ].map((item) => (
                 <li
                   key={item}

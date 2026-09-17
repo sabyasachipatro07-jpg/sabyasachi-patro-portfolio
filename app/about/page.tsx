@@ -1,88 +1,137 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "About — Sabyasachi Patro",
   description:
-    "The story behind a transition from VFX and creative production into product management.",
+    "Learn about Sabyasachi Patro's transition from VFX and creative production into product management and applied AI.",
 };
 
 const transferable = [
   {
-    title: "Problem-solving under real constraints",
+    title: "Problem-solving under constraints",
     detail:
-      "VFX work rarely has a clean brief — a shot has to land within a technical spec, a deadline, and a director's changing notes, all at once. Product problems show up the same way: ambiguous, constrained, and rarely solved on the first pass.",
+      "VFX work required solving complex problems within strict deadlines, technical requirements, and changing creative direction. I bring the same structured approach to understanding and solving product problems.",
   },
   {
-    title: "Reading complex, multi-step workflows",
+    title: "Understanding complex workflows",
     detail:
-      "A single frame passes through modeling, texturing, lighting, and compositing before anyone sees it. Understanding how a change in one stage ripples through the others is the same skill as mapping a user journey or a system's dependencies.",
+      "Working across modeling, texturing, lighting, rendering, and compositing taught me to understand how individual steps connect and how changes in one stage affect the overall workflow.",
   },
   {
     title: "Cross-functional collaboration",
     detail:
-      "Texture and look-development work sits between art direction and technical pipeline — translating creative intent into something a render engine can actually produce, and pipeline constraints back into terms an artist can act on.",
+      "Texture and look-development work required translating creative direction into technically achievable results while collaborating with artists, supervisors, and pipeline teams.",
   },
   {
     title: "Creative and analytical thinking",
     detail:
-      "Look development is equal parts craft judgment (does this read as correct) and technical reasoning (why doesn't it render correctly) — the same back-and-forth product work asks for between user needs and what's buildable.",
+      "My work combined visual judgment with technical investigation. I learned to evaluate both the user-facing result and the underlying process needed to achieve it.",
   },
   {
-    title: "Attention to detail, under deadline",
+    title: "Execution and attention to detail",
     detail:
-      "A texture map with a visible seam ships broken, no matter how good the reasoning behind it was. That standard — correct and on time, not one or the other — carries directly into product delivery.",
+      "Delivering production-ready assets required accuracy, consistency, iteration, and ownership—often under tight deadlines and changing requirements.",
   },
   {
-    title: "Learning new tools quickly",
+    title: "Learning tools quickly",
     detail:
-      "Studios change pipelines and software versions often. Picking up a new tool fast enough to stay productive is a habit, not a one-time skill — the same habit that's made picking up product and AI tooling straightforward.",
+      "Adapting to new software, pipelines, and production workflows developed my ability to learn quickly and stay effective in changing environments.",
   },
 ];
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-20 md:px-10 md:py-28">
-      <h1 className="font-display text-4xl text-paper md:text-5xl">About</h1>
+      <div className="max-w-3xl">
+        <p className="text-xs font-medium uppercase tracking-[0.24em] text-signal">
+          About Me
+        </p>
 
-      <div className="mt-8 space-y-6 text-lg leading-relaxed text-paper">
-        <p>
-          I spent five-plus years as a Texture & Look Development artist in
-          film and animation — work that lives or dies on problem-solving
-          inside real constraints: tight deadlines, exacting technical specs,
-          and a dozen other departments whose work has to line up with yours.
-        </p>
-        <p className="text-muted">
-          Product management is a deliberate evolution of that same instinct,
-          applied to a different kind of problem: understanding what a user
-          actually needs, and building the smallest useful thing that gets
-          them there. It isn&apos;t a departure from the craft-and-constraints
-          mindset I built in VFX — it&apos;s the same mindset, pointed at
-          products instead of frames.
-        </p>
-        <p className="text-muted">
-          To make that transition deliberately rather than informally, I
-          completed the Product Management with Generative & Agentic AI
-          program at BITS School of Management (BITSoM), working through
-          product strategy, user research, prioritization, product metrics,
-          Agile methodologies, and AI-powered product development. Alongside
-          that, I&apos;m building a portfolio of case studies and working
-          prototypes — some self-directed, one an active team capstone — to
-          put that thinking into practice rather than leave it theoretical.
-        </p>
+        <h1 className="mt-5 font-display text-4xl leading-tight text-paper md:text-5xl">
+          Why Product Management?
+        </h1>
+
+        <div className="mt-8 space-y-6 text-lg leading-relaxed">
+          <p className="text-paper">
+            I am an aspiring Associate Product Manager transitioning from
+            more than five years of experience in VFX and creative production.
+            My background has involved solving complex problems, understanding
+            interconnected workflows, collaborating across teams, and
+            delivering high-quality work within real-world constraints.
+          </p>
+
+          <p className="text-muted">
+            Product Management feels like a natural next step because it
+            combines many of the things I enjoy: understanding problems,
+            exploring user needs, simplifying complex workflows, prioritizing
+            solutions, and turning ideas into useful experiences.
+          </p>
+
+          <p className="text-muted">
+            To build a stronger foundation for this transition, I completed
+            the Product Management with Generative & Agentic AI program at
+            BITS School of Management. The program helped me develop practical
+            knowledge of product strategy, user research, prioritization,
+            product metrics, Agile methodologies, and AI-powered product
+            development.
+          </p>
+
+          <p className="text-muted">
+            I am now applying that learning through product case studies and
+            working prototypes. My focus is on building practical,
+            AI-powered product experiences that begin with a clear problem
+            and move through research, feature definition, prioritization,
+            prototyping, and measurable outcomes.
+          </p>
+        </div>
       </div>
 
-      <div className="mt-16">
-        <SectionHeading title="What carries over" />
+      <div className="mt-20">
+        <SectionHeading title="What I bring from VFX" />
+
         <div className="grid gap-8 md:grid-cols-2">
           {transferable.map((item) => (
             <div key={item.title} className="border-t border-hairline pt-5">
-              <h3 className="font-display text-xl text-paper">
+              <h2 className="font-display text-xl text-paper">
                 {item.title}
-              </h3>
-              <p className="mt-2 text-muted">{item.detail}</p>
+              </h2>
+
+              <p className="mt-3 leading-relaxed text-muted">
+                {item.detail}
+              </p>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="mt-20 border-t border-hairline pt-8">
+        <h2 className="font-display text-2xl text-paper">
+          What I am building toward
+        </h2>
+
+        <p className="mt-4 max-w-2xl leading-relaxed text-muted">
+          I am looking for an opportunity to contribute as an Associate
+          Product Manager, learn from experienced product teams, and help
+          build products that are useful, intuitive, and grounded in real
+          user needs.
+        </p>
+
+        <div className="mt-6 flex flex-wrap gap-4">
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center border border-hairline px-5 py-3 text-sm text-paper transition-colors hover:border-signalink hover:text-signalink"
+          >
+            Explore Case Studies
+          </Link>
+
+          <Link
+            href="/contact"
+            className="inline-flex items-center bg-signal px-5 py-3 text-sm font-medium text-onsignal transition-opacity hover:opacity-90"
+          >
+            Get in Touch
+          </Link>
         </div>
       </div>
     </div>

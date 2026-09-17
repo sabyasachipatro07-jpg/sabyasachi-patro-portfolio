@@ -5,23 +5,29 @@ import { experience } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Experience — Sabyasachi Patro",
   description:
-    "Professional experience in Texture & Look Development across film and animation, and the transferable skills carried into product management.",
+    "Professional experience, transferable skills, and creative-production background supporting a transition into product management.",
 };
 
 export default function ExperiencePage() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-20 md:px-10 md:py-28">
-      <h1 className="font-display text-4xl text-paper md:text-5xl">
-        Experience
-      </h1>
+      <div className="max-w-3xl">
+        <p className="text-xs font-medium uppercase tracking-[0.24em] text-signal">
+          Professional Background
+        </p>
 
-      <p className="mt-5 max-w-prose text-lg text-muted">
-        Five-plus years in Texture & Look Development across film and
-        animation. The work itself was visual, but the skills it demanded —
-        problem-solving, cross-team collaboration, workflow optimization,
-        handling feedback, and delivering under deadline — are the ones I now
-        bring to product management.
-      </p>
+        <h1 className="mt-5 font-display text-4xl leading-tight text-paper md:text-5xl">
+          Experience
+        </h1>
+
+        <p className="mt-6 text-lg leading-relaxed text-muted">
+          My professional experience has developed my ability to understand
+          complex workflows, solve problems under constraints, collaborate
+          across teams, and deliver high-quality outcomes. I’m now applying
+          these strengths to product discovery, user problems, and
+          AI-powered product development.
+        </p>
+      </div>
 
       <ol className="mt-14 space-y-0">
         {experience.map((job, i) => (
@@ -64,7 +70,7 @@ export default function ExperiencePage() {
               </div>
 
               {job.projects.length > 0 && (
-                <p className="mt-4 text-sm text-paper">
+                <p className="mt-4 text-sm leading-relaxed text-paper">
                   Projects: {job.projects.join(", ")}
                 </p>
               )}
@@ -73,10 +79,13 @@ export default function ExperiencePage() {
         ))}
       </ol>
 
-      <p className="mt-10 max-w-prose border-l border-signal pl-6 text-muted">
-        Building on production experience to solve user problems, design
-        workflows, and create useful products.
-      </p>
+      <div className="mt-10 border-l border-signal pl-6">
+        <p className="text-muted">
+          I’m building on this foundation as I transition into Product
+          Management, with a focus on understanding user needs, improving
+          workflows, prioritizing solutions, and creating useful products.
+        </p>
+      </div>
     </div>
   );
 }

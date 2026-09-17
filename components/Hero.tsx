@@ -38,44 +38,48 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-20 md:grid-cols-[1fr_360px] md:px-10 md:py-32"
+        className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-20 md:grid-cols-[1fr_360px] md:px-10 md:py-28"
       >
         <div>
           <motion.div
             variants={item}
-            className="mb-8 inline-flex items-center gap-2 border border-hairline px-3 py-1.5 text-xs text-muted"
+            className="mb-6 text-xs font-medium uppercase tracking-[0.24em] text-signal"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-            Open to Associate Product Manager opportunities
+            PRODUCT MANAGEMENT • AI PRODUCT BUILDING
           </motion.div>
 
           <motion.h1
             variants={item}
-            className="font-display max-w-4xl text-balance text-4xl leading-[1.1] text-paper md:text-6xl"
+            className="font-display max-w-3xl text-balance text-4xl leading-[1.08] text-paper md:text-5xl"
           >
-            From crafting worlds in VFX to building products that solve real
-            problems.
+            Sabyasachi Patro
           </motion.h1>
+
+          <motion.h2
+            variants={item}
+            className="mt-5 text-xl font-normal text-paper md:text-2xl"
+          >
+            Aspiring Associate Product Manager
+          </motion.h2>
 
           <motion.p
             variants={item}
-            className="mt-8 max-w-2xl text-lg text-muted"
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-muted"
           >
-            An aspiring Associate Product Manager with 5+ years of experience
-            in creative production, a foundation in product management and
-            generative AI, and a growing portfolio of practical AI-powered
-            product solutions.
+            Turning real-world problems into useful product experiences — from
+            problem discovery and feature prioritization to fully working
+            AI-powered prototypes.
           </motion.p>
 
           <motion.div
             variants={item}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-9 flex flex-wrap gap-4"
           >
             <Link
               href="/case-studies"
               className="inline-flex items-center gap-1.5 bg-signal px-6 py-3 text-sm font-medium text-onsignal transition-opacity duration-200 hover:opacity-90"
             >
-              View Case Studies
+              Explore Case Studies
               <ArrowUpRight size={15} />
             </Link>
 
@@ -83,7 +87,7 @@ export default function Hero() {
               href="/about"
               className="inline-flex items-center gap-1.5 border border-hairline px-6 py-3 text-sm text-paper transition-colors duration-200 hover:border-signalink hover:text-signalink"
             >
-              Read My Story
+              Why Product Management?
             </Link>
           </motion.div>
         </div>
